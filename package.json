@@ -1,5 +1,5 @@
 {
-  "name": "nexpress",
+  "name": "nexthand",
   "version": "0.0.1",
   "description": "The method routing and middleware layer for Next.js (and many others)",
   "keywords": [
@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rayat69/nexpress.git"
+    "url": "git+https://github.com/rayat69/nexthand.git"
   },
   "author": "Musaddik Rayat (https://iamrayat.epizy.com)",
   "bugs": {
-    "url": "https://github.com/rayat69/nexpress/issues"
+    "url": "https://github.com/rayat69/nexthand/issues"
   },
-  "homepage": "https://github.com/rayat69/nexpress#readme",
+  "homepage": "https://github.com/rayat69/nexthand#readme",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.27",

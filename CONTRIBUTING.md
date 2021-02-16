@@ -1,10 +1,10 @@
-# Contribute to nexpress
+# Contribute to nexthand
 
-:+1::tada: Thank you for being here. It is people like you that make `nexpress` great and help shape a better open-source community.
+:+1::tada: Thank you for being here. It is people like you that make `nexthand` great and help shape a better open-source community.
 
 Following this guideline improves communication and organization, which helps save your and other developers' times and effort in future development.
 
-## What `nexpress` is looking for
+## What `nexthand` is looking for
 
 I welcome all contributions from the community. There are many ways to contribute:
 
@@ -44,7 +44,7 @@ The steps to submit a PR are:
 
 ### Javascript style
 
-`nexpress` follows [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript). Please run `npm run lint` and fix any linting warnings.
+`nexthand` follows [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript). Please run `npm run lint` and fix any linting warnings.
 
 ### Commit message
 
