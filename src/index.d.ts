@@ -1,4 +1,4 @@
-declare module "nexpress" {
+declare module "nexthand" {
   import { IncomingMessage, ServerResponse } from "http";
 
   type NextHandler = (err?: any) => void;

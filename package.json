@@ -1,6 +1,6 @@
 {
   "name": "nexthand",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The method routing and middleware layer for Next.js (and many others)",
   "keywords": [
     "javascript",
