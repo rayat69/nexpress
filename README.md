@@ -1,10 +1,10 @@
-# next-connect
+# nexpress
 
-[![npm](https://badgen.net/npm/v/next-connect)](https://www.npmjs.com/package/next-connect)
-[![CircleCI](https://circleci.com/gh/hoangvvo/next-connect.svg?style=svg)](https://circleci.com/gh/hoangvvo/next-connect)
-[![codecov](https://codecov.io/gh/hoangvvo/next-connect/branch/master/graph/badge.svg)](https://codecov.io/gh/hoangvvo/next-connect)
-[![minified size](https://badgen.net/bundlephobia/min/next-connect)](https://bundlephobia.com/result?p=next-connect)
-[![download/year](https://badgen.net/npm/dy/next-connect)](https://www.npmjs.com/package/next-connect)
+[![npm](https://badgen.net/npm/v/nexpress)](https://www.npmjs.com/package/nexpress)
+[![CircleCI](https://circleci.com/gh/hoangvvo/nexpress.svg?style=svg)](https://circleci.com/gh/hoangvvo/nexpress)
+[![codecov](https://codecov.io/gh/hoangvvo/nexpress/branch/master/graph/badge.svg)](https://codecov.io/gh/hoangvvo/nexpress)
+[![minified size](https://badgen.net/bundlephobia/min/nexpress)](https://bundlephobia.com/result?p=nexpress)
+[![download/year](https://badgen.net/npm/dy/nexpress)](https://www.npmjs.com/package/nexpress)
 [![PRs Welcome](https://badgen.net/badge/PRs/welcome/ff5252)](CONTRIBUTING.md)
 
 The smol method routing and middleware for [Next.js](https://nextjs.org/) (also works in [other frameworks](#using-in-other-frameworks)). Powered by [trouter](https://github.com/lukeed/trouter).
@@ -20,18 +20,18 @@ The smol method routing and middleware for [Next.js](https://nextjs.org/) (also 
 ## Installation
 
 ```sh
-npm install next-connect
+npm install nexpress
 // or
-yarn add next-connect
+yarn add nexpress
 ```
 
 ## Usage
 
-`next-connect` is often used in [API Routes](https://nextjs.org/docs/api-routes/introduction):
+`nexpress` is often used in [API Routes](https://nextjs.org/docs/api-routes/introduction):
 
 ```javascript
 // pages/api/hello.js
-import nc from "next-connect";
+import nc from "nexpress";
 
 const handler = nc()
   .use(someMiddleware())
@@ -63,7 +63,7 @@ By default, the base interfaces of `req` and `res` are `IncomingMessage` and `Se
 
 ```typescript
 import { NextApiRequest, NextApiResponse } from "next";
-import nc from "next-connect";
+import nc from "nexpress";
 
 const handler = nc<NextApiRequest, NextApiResponse>();
 ```
@@ -95,7 +95,7 @@ It is more like good ol' [connect](https://www.npmjs.com/package/connect) (hence
 
 ### nc(options)
 
-Initialize an instance of `next-connect`.
+Initialize an instance of `nexpress`.
 
 #### options.onError
 
@@ -155,7 +155,7 @@ handler.get("/users/:userId/posts/:postId", (req, res) => {
 
 `base` (optional) - match all route to the right of `base` or match all if omitted.
 
-`fn`(s) are functions of `(req, res[, next])` **or** an instance of `next-connect`, where it will act as a sub application.
+`fn`(s) are functions of `(req, res[, next])` **or** an instance of `nexpress`, where it will act as a sub application.
 
 ```javascript
 // Mount a middleware function
@@ -167,7 +167,7 @@ handler.use((req, res, next) => {
 // Or include a base
 handler.use("/foo", fn); // Only run in /foo/**
 
-// Mount an instance of next-connect
+// Mount an instance of nexpress
 const common = nc().use(midd1).use("/", midd2); // good for common middlewares
 const auth = nc().use("/dashboard", checkAuth);
 const subapp = nc().get(getHandle).post("/baz", postHandle).put("/", putHandle);
@@ -250,7 +250,7 @@ If you need to create all handlers for all routes in one file (similar to `Expre
 
 ```js
 // pages/api/[[...slug]].js
-import nc from "next-connect";
+import nc from "nexpress";
 
 const handler = nc({ attachParams: true })
   .use("/api/hello", someMiddleware())
@@ -267,14 +267,14 @@ While this allows quick migration from Express.js, consider seperating routes in
 
 ### Using in other frameworks
 
-`next-connect` supports any frameworks and runtimes that support `(req, res) => void` handler.
+`nexpress` supports any frameworks and runtimes that support `(req, res) => void` handler.
 
 <details>
 <summary><a href="https://github.com/zeit/micro">Micro</a></summary>
 
 ```javascript
 const { send } = require("micro");
-const nc = require("next-connect");
+const nc = require("nexpress");
 
 module.exports = nc()
   .use(middleware)
@@ -292,7 +292,7 @@ module.exports = nc()
 <summary><a href="https://vercel.com/docs/serverless-functions/introduction">Vercel</a></summary>
 
 ```javascript
-const nc = require("next-connect");
+const nc = require("nexpress");
 
 module.exports = nc()
   .use(middleware)
@@ -312,7 +312,7 @@ module.exports = nc()
 ```javascript
 const http = require("http");
 // const http2 = require('http2');
-const nc = require("next-connect");
+const nc = require("nexpress");
 
 const handler = nc()
   .use(middleware)
