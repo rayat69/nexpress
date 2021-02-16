@@ -1,11 +1,9 @@
 # nexthand
 
 [![npm](https://badgen.net/npm/v/nexthand)](https://www.npmjs.com/package/nexthand)
-[![CircleCI](https://circleci.com/gh/hoangvvo/nexthand.svg?style=svg)](https://circleci.com/gh/hoangvvo/nexthand)
-[![codecov](https://codecov.io/gh/hoangvvo/nexthand/branch/master/graph/badge.svg)](https://codecov.io/gh/hoangvvo/nexthand)
 [![minified size](https://badgen.net/bundlephobia/min/nexthand)](https://bundlephobia.com/result?p=nexthand)
-[![download/year](https://badgen.net/npm/dy/nexthand)](https://www.npmjs.com/package/nexthand)
-[![PRs Welcome](https://badgen.net/badge/PRs/welcome/ff5252)](CONTRIBUTING.md)
+[![download/month](https://badgen.net/npm/dm/nexthand)](https://www.npmjs.com/package/nexthand)
+[![license](https://badgen.net/npm/license/nexthand)](https://www.npmjs.com/package/nexthand)
 
 The smol method routing and middleware for [Next.js](https://nextjs.org/) (also works in [other frameworks](#using-in-other-frameworks)). Powered by [trouter](https://github.com/lukeed/trouter).
 
